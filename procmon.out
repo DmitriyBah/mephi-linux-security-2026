@@ -1,0 +1,167 @@
+EUSER    RUSER      PID COMMAND
+root     root         1 init [2]
+root     root         2 [kthreadd]
+root     root         3 [pool_workqueue_release]
+root     root         4 [kworker/R-rcu_gp]
+root     root         5 [kworker/R-sync_wq]
+root     root         6 [kworker/R-kvfree_rcu_reclaim]
+root     root         7 [kworker/R-slub_flushwq]
+root     root         8 [kworker/R-netns]
+root     root        10 [kworker/0:0H-kblockd]
+root     root        12 [kworker/u8:0-efi_runtime]
+root     root        13 [kworker/R-mm_percpu_wq]
+root     root        14 [ksoftirqd/0]
+root     root        15 [rcu_preempt]
+root     root        16 [rcu_exp_par_gp_kthread_worker/0]
+root     root        17 [rcu_exp_gp_kthread_worker]
+root     root        18 [migration/0]
+root     root        19 [idle_inject/0]
+root     root        20 [cpuhp/0]
+root     root        21 [cpuhp/1]
+root     root        22 [idle_inject/1]
+root     root        23 [migration/1]
+root     root        24 [ksoftirqd/1]
+root     root        26 [kworker/1:0H-kblockd]
+root     root        29 [kdevtmpfs]
+root     root        30 [kworker/R-inet_frag_wq]
+root     root        31 [rcu_tasks_kthread]
+root     root        32 [oom_reaper]
+root     root        33 [kworker/R-writeback]
+root     root        34 [kcompactd0]
+root     root        35 [ksmd]
+root     root        36 [khugepaged]
+root     root        37 [kworker/R-kblockd]
+root     root        38 [kworker/R-blkcg_punt_bio]
+root     root        39 [kworker/R-kintegrityd]
+root     root        40 [irq/9-acpi]
+root     root        41 [kworker/R-tifm]
+root     root        42 [kworker/R-ata_sff]
+root     root        43 [kworker/R-md_bitmap]
+root     root        44 [kworker/u8:1-ipv6_addrconf]
+root     root        45 [kworker/R-devfreq_wq]
+root     root        46 [kworker/R-rpciod]
+root     root        47 [kworker/R-xprtiod]
+root     root        48 [kworker/u9:1-loop0]
+root     root        49 [kswapd0]
+root     root        50 [kworker/R-nfsiod]
+root     root        51 [kworker/R-cifsiod]
+root     root        52 [kworker/R-smb3decryptd]
+root     root        53 [kworker/R-cifsfileinfoput]
+root     root        54 [kworker/R-cifsoplockd]
+root     root        55 [kworker/R-deferredclose]
+root     root        56 [kworker/R-serverclose]
+root     root        57 [kworker/R-cfid_put_wq]
+root     root        58 [kworker/R-xfsalloc]
+root     root        59 [kworker/R-xfs_mru_cache]
+root     root        60 [kworker/R-acpi_thermal_pm]
+root     root        63 [kworker/R-nvme-wq]
+root     root        64 [kworker/R-nvme-reset-wq]
+root     root        65 [kworker/R-nvme-delete-wq]
+root     root        66 [scsi_eh_0]
+root     root        67 [kworker/R-scsi_tmf_0]
+root     root        68 [scsi_eh_1]
+root     root        69 [kworker/R-scsi_tmf_1]
+root     root        70 [scsi_eh_2]
+root     root        72 [kworker/R-scsi_tmf_2]
+root     root        73 [scsi_eh_3]
+root     root        74 [kworker/R-scsi_tmf_3]
+root     root        76 [kworker/R-vfio-irqfd-cleanup]
+root     root        80 [kworker/R-uas]
+root     root        81 [kworker/R-raid5wq]
+root     root        82 [kworker/R-kvub300c]
+root     root        83 [kworker/R-kvub300p]
+root     root        84 [kworker/R-kvub300d]
+root     root        85 [kworker/R-kmemstick]
+root     root        86 [kworker/R-mld]
+root     root        87 [kworker/R-ipv6_addrconf]
+root     root        88 [kworker/R-kstrp]
+root     root        89 [kworker/u11:0]
+root     root        90 [kworker/u12:0]
+root     root        91 [kworker/u13:0]
+root     root       274 [kworker/1:1H-kblockd]
+root     root       335 [kworker/0:1H-kblockd]
+root     root       497 dbus-launch --autolaunch 10ae4148010bcc7d15cdaebe6aeb1955 --binary-syntax --close-stderr
+root     root       498 /usr/bin/dbus-daemon --syslog-only --fork --print-pid 5 --print-address 7 --session
+root     root       732 [kworker/1:2-mm_percpu_wq]
+root     root      1696 /sbin/udevd --daemon
+root     root      1748 [kworker/R-tpm_dev_wq]
+root     root      1774 [irq/18-vmwgfx]
+root     root      1775 [kworker/R-ttm]
+root     root      1776 dhclient -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -df /var/lib/dhcp/dhclient6.eth0.leases eth0
+root     root      1885 /bin/brltty -q
+root     root      2272 /usr/sbin/acpi_fakekeyd
+root     root      2344 /usr/sbin/rsyslogd
+root     root      2374 /usr/sbin/acpid
+daemon   root      2414 /usr/sbin/atd
+message+ message+  2450 /usr/bin/dbus-daemon --system
+root     root      2475 /usr/sbin/bluetoothd
+polkitd  polkitd   2543 /usr/lib/polkit-1/polkitd --no-debug
+root     root      2610 /usr/sbin/cron
+root     root      2637 /usr/sbin/cupsd -C /etc/cups/cupsd.conf -s /etc/cups/cups-files.conf
+root     root      2661 elogind-daemon
+root     root      2711 /usr/lib/essora-network/essora-networkd
+root     root      2769 /usr/sbin/gpm -m /dev/input/mice -t exps2
+root     root      2794 /usr/sbin/haveged
+root     root      2867 /usr/sbin/nmbd -D
+root     root      2900 [kworker/R-cfg80211]
+root     root      3119 /usr/bin/slim -d
+root     root      3123 /usr/lib/xorg/Xorg -nolisten tcp -deferglyphs 16 -auth /var/run/slim.auth vt07
+root     root      3153 /usr/sbin/smbd -D
+root     root      3155 smbd: notifyd .
+root     root      3156 smbd: cleanupd 
+root     root      3183 sshd: /usr/sbin/sshd [listener] 0 of 10-100 startups
+root     root      3230 /usr/sbin/xl2tpd
+root     root      3300 /sbin/getty --noclear 38400 tty1
+root     root      3301 /sbin/getty 38400 tty2
+root     root      3302 /sbin/getty 38400 tty3
+root     root      3303 /sbin/getty 38400 tty4
+root     root      3304 /sbin/getty 38400 tty5
+root     root      3305 /sbin/getty 38400 tty6
+essora   essora    3331 /opt/essora/sonicde/bin/startplasma-x11
+essora   essora    3350 /usr/bin/dbus-daemon --syslog --fork --print-pid 5 --print-address 7 --session
+essora   essora    3353 [auto-numlock.sh] <defunct>
+essora   essora    3373 [essora-kde-loca] <defunct>
+essora   essora    3374 [cbatticon-tray] <defunct>
+essora   essora    3375 [essora-desklet] <defunct>
+essora   essora    3380 [essora-desklet] <defunct>
+essora   essora    3381 [ensure-panel.sh] <defunct>
+essora   essora    3415 /opt/essora/sonicde/bin/plasma_session
+essora   essora    3426 /opt/essora/sonicde/bin/kded6
+essora   essora    3429 /opt/essora/sonicde/bin/sonic-win
+essora   essora    3436 /opt/essora/sonicde/lib/x86_64-linux-gnu/libexec/kglobalacceld
+root     root      3440 /usr/libexec/udisks2/udisksd
+essora   essora    3455 /usr/libexec/dconf-service
+essora   essora    3459 /opt/essora/sonicde/bin/ksmserver
+essora   essora    3465 /opt/essora/sonicde/bin/xembedsniproxy
+essora   essora    3466 /opt/essora/sonicde/lib/x86_64-linux-gnu/libexec/kf6/baloo_file
+essora   essora    3469 /opt/essora/sonicde/bin/plasmashell
+essora   essora    3471 /opt/essora/sonicde/bin/kaccess
+essora   essora    3472 /opt/essora/sonicde/bin/gmenudbusmenuproxy
+essora   essora    3481 /usr/lib/essora-storage-monitor/essora-storage-monitor
+essora   essora    3482 /usr/bin/rox-qt-drives
+essora   essora    3491 /usr/bin/essora-welcome --start
+essora   essora    3497 /bin/sh /usr/local/bin/pipewire-start.sh
+essora   essora    3498 /usr/lib/essora-network/essora-network
+essora   essora    3506 /usr/bin/essora-updater --tray
+essora   essora    3523 /opt/essora/sonicde/lib/x86_64-linux-gnu/libexec/kactivitymanagerd
+essora   essora    3542 /usr/bin/xsettingsd
+essora   essora    3556 /opt/essora/sonicde/lib/x86_64-linux-gnu/libexec/kf6/kscreen_backend_launcher
+essora   essora    3571 pipewire
+rtkit    rtkit     3578 /usr/libexec/rtkit-daemon
+essora   essora    3584 wireplumber
+essora   essora    3601 pipewire-pulse
+essora   essora    3651 essora-audio --tray
+root     root      6658 [kworker/u9:0-loop0]
+root     root      7180 [kworker/u9:5-loop0]
+root     root      7936 [kworker/0:1-events_freezable_pwr_efficient]
+root     root     11353 [kworker/u10:2-loop0]
+essora   essora   14632 essoraterm -xrm EssoraTerm*background: #00090B -xrm EssoraTerm*foreground: #F6F5F4 -xrm EssoraTerm*cursorColor: #F6F5F4 -xrm EssoraTerm*highlightColor: #7D9B37 -xrm EssoraTerm*highlightTextColor: #FFFFFF -xrm EssoraTerm*faceName: Monospace 11:style=Regular:antialias=true:autohint=true -xrm EssoraTerm*renderFont: true -xrm EssoraTerm*faceSize: 10.0 -xrm EssoraTerm*VT100.geometry: 95x25 -xrm EssoraTerm*saveLines: 409600 -xrm EssoraTerm*VT100.scrollBar: true -xrm EssoraTerm*rightScrollBar: true -xrm EssoraTerm*VT100*scrollbar.width: 14 -xrm EssoraTerm*cursorBlink: true -xrm EssoraTerm*visualBell: false -xrm EssoraTerm*scrollKey: true -xrm EssoraTerm*scrollTtyOutput: false -xrm EssoraTerm*allowBoldFonts: true -xrm EssoraTerm*cursorUnderLine: false -xrm EssoraTerm*cursorBar: false
+essora   essora   14659 bash
+root     root     14809 [kworker/0:2-ata_sff]
+root     root     16983 [kworker/0:0-events_freezable_pwr_efficient]
+root     root     17686 [kworker/u10:1-events_unbound]
+root     root     19167 [kworker/0:3-ata_sff]
+essora   essora   20357 /opt/essora/sonicde/lib/x86_64-linux-gnu/libexec/kf6/kioworker /opt/essora/sonicde/lib/x86_64-linux-gnu/plugins/kf6/kio/tags.so tags  local:/run/user/1000/plasmashellBQdfbO.9.kioworker.socket
+essora   essora   20491 ps -eo euser,ruser,pid,args
+root     root     22635 [kworker/u10:0-loop0]
+root     root     30174 [kworker/1:1]
