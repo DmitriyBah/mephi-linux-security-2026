@@ -138,3 +138,22 @@
   138  find / -xdev -type f -perm -4000 -ls > setuid-files.out
   139  ps -eo euser,ruser,pid,args > procmon.out
   140  history > ~/history.out
+  141  cp ~/history.out .
+  142  nano README.md
+  143  git add .
+  144  git commit -m "Add MEPHI homework 2026 files"
+  145  git branch -M main
+  146  git remote add origin https://github.com/DmitriyBah/mephi-linux-security-2026.git
+  147  git push -u origin main
+  148  git config --global user.name "DmitriyBah"
+  149  git config --global user.email "bahmatovdima@mail.ru"
+  150  git commit -m "Add MEPHI homework 2026 files"
+  151  git log --oneline
+  152  git push -u origin main
+  153  git pull original main --allow-unrelated-histories
+  154  git push -u origin main --force
+  155  cd ~/mephi-repo
+  156  git push -u origin main --force
+  157  git pull original main --allow-unrelated-histories
+  158  git pull origin main --allow-unrelated-histories
+  159  history > ~/history.out
