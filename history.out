@@ -1,159 +1,77 @@
-    1  su -
-    2  whoami
-    3  su -
-    4  sudo groupadd students
-    5  sudo useradd -u 1234 -m -G students -s /bin/bash user1
-    6  sudo passwd user1
-    7  sudo chage -M 90 user1
-    8  id user1
-    9  chage -l user1
-   10  su -
-   11  sudo find / -xdev -type f -perm -4000 -ls > ~/setuid-files.out
-   12  su -
-   13  sudo find / -xdev -type f -perm -4000 -ls > ~/setuid-files.out
-   14  ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root" && $2!="-" {print}'
-   15  ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root" && $2!="-" {print}' > ~/procmon.out
-   16  mkdir -p /home/user1/bin
-   17  su - user1
-   18  ls -l /home/user1/bin/cat
-   19  su -user1
-   20  su - user1
-   21  ~/bin/cat /etc/shadow
-   22  su - user1
-   23  sudo -l
-   24  sudo -i
-   25  exit
-   26  su -
-   27  sudo groupadd students
-   28  sudo useradd -u 1234 -m -G students -s/bin/bash user1
-   29  sudo passwd user1
-   30  sudo chage -M 90 user1
-   31  id user1
-   32  chage -l user1
-   33  sudo find / -xdev -type f -perm -4000 -ls > ~setuid-files.out
-   34  ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root" && $2!="-" {print}'
-   35  ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root" && $2!="-" {print}' > ~/procmon.out
-   36  mkdir -p /home/user1/bin
-   37  sudo mkdir -p /home/user1/bin
-   38  sudo cp /usr/bin/cat /home/user1/bin/cat
-   39  sudo chown user1:user1 /home/user1/bin/cat
-   40  sudo chmod u+s /home/user1/bin/cat
-   41  sudo ls -l /home/user1/bin/cat
-   42  ls -l /home/user1/bin/cat
-   43  sudo ls -l /home/user1/bin/cat
-   44  su - user1
-   45  ~/bin/cat /etc/shadow
-   46  su - user1
-   47  cp /usr/bin/chown /home/user1/bin/chown
-   48  su -
-   49  touch /tmp/rootfile
-   50  sudo chown root /tmp/rootfile
-   51  su - user1
-   52  su -
-   53  su - user1
-   54  cp /usr/bin/chown /home/user1/bin/chown
-   55  su - user1
-   56  sudo mkdir -p /home/user1/bin
-   57  sudo cp /usr/bin/cat /home/user1/bin/cat
-   58  sudo chown user1:user1 /home/user1/bin/cat
-   59  sudo chmod u+s /home/user1/bin/cat
-   60  ls -l /home/user1/bin/cat
-   61  su - user1
-   62  sudo cp /usr/bin/chown /home/user1/bin/chown
-   63  sudo chown user1:user1 /home/user1/bin/chown
-   64  sudo setcap cap_chown+ep /home/user1/bin/chown
-   65  getcap /home/user1/bin/chown
-   66  sudo getcap /home/user1/bin/chown
-   67  touch /tmp/rootfile
-   68  sudo chown root /tmp/rootfile
-   69  su - user1
-   70  sudo visudo -f /etc/sudoers.d/user1-time
-   71  su - user1
-   72  sudo timedatectl set-ntp true
-   73  su - user1
-   74  sudo timedatectl set-ntp true
-   75  sudo systemctl stop systemd-timesyncd.service && sudo systemctl disable systemd-timesyncd.service
-   76  sudo timedatectl set-ntp false
-   77  ps -p 1 -o comm=
-   78  cat /etc/os-release
-   79  ps aux | grep -E "ntp|chrony|openntpd" | grep -v grep
-   80  ls /etc/init.d/ | grep -E "ntp|chrony|time"
-   81  sudo service ntpsec stop
-   82  sudo update-rc.d ntpsec disable
-   83  ps aux | grep -E "ntpd" | grep -v grep
-   84  ls /etc/rc*.d/*ntp*
-   85  sudo hwclock --systohc
-   86  sudo /sbin/hwclock --systohc
-   87  sudo apt install util-linux
-   88  sudo hwclock --show
-   89  sudo apt reinstall util-linux
-   90  sudo hwclock --show
-   91  sudo apt install util-linux-extra
-   92  sudo hwclock --systohc
-   93  sudo hwclock --show
-   94  sudo apt install scrot
-   95  scrot ~/mephi-screenshot.png
-   96  echo 373034
-   97  scrot ~/mephi-screenshot.png
-   98  mv ~/mephi-screenshot_001.png ~/mephi-screenshot.png
-   99  rm ~/mephi-screenshot_000.png
-  100  gpicview ~/mephi-screenshot_001.png
-  101  fev ~/mephi-screenshot_001.png
-  102  sudo apt install fev
-  103  sudo apt install feh
-  104  feh ~/mephi-screenshot_001.png
-  105  feh ~/mephi-screenshot.png
-  106  history > ~/history.out
-  107  stat /home/user1 > ~/stat.out
-  108  stat /home/user1/bin/cat >> ~/stat.out
-  109  sudo stat /home/user1/bin/cat >> ~/stat.out
-  110  ls ~/mephi-screenshot*.png
-  111  rm ~/mephi-screenshot*.png 2>/dev/null
-  112  echo 373034
-  113  scrot -d 5 ~/mephi-screenshot.png
-  114  ls -l ~/mephi-screenshot*.png
-  115  sudo stat /home/user1/bin/chown >> ~/stat.out
-  116  sudo getcap /home/user1/bin/chown > ~/getcap.out
-  117  sudo cat /etc/passwd > ~/passwd.out
-  118  sudo cat /etc/shadow > ~/shadow.out
-  119  sudo cat /etc/group > ~/group.out
-  120  sudo cat /etc/sudoers.d/user1-time > ~/sudoers.out
-  121  mkdir ~/mephi-repo && ~/mephi-repo
-  122  git init
-  123  mkdir ~/mephi-repo && cd ~/mephi-repo
-  124  rm -rf ~/.git
-  125  mkdir ~/mephi-repo
-  126  mkdir ~/mephi-repo && cd ~/mephi-repo
-  127  cd ~/mephi-repo
-  128  git init
-  129  cp ~/history.out ~/stat.out ~/ getcap.out ~/mephi-screenshot.png .
-  130  cp ~/history.out ~/stat.out ~/ getcap.out ~/mephi-screenshot.png
-  131  cp ~/history.out ~/stat.out ~/getcap.out ~/mephi-screenshot.png .
-  132  cp ~/passwd.out ~/group.out ~/sudoers.out .
-  133  sudo sed -E 's/:[^:]*\$[^:]*\$[^:]*:/:REDACTED:/' /etc/shadow.txt
-  134  sudo sed -E 's/:[^:]*\$[^:]*\$[^:]*:/:REDACTED:/' /etc/shadow > shadow.txt
-  135  grep -c REDACTED shadow.txt
-  136  head -3 shadow.txt
-  137  grep -E "essora|user1" shadow.txt
-  138  find / -xdev -type f -perm -4000 -ls > setuid-files.out
-  139  ps -eo euser,ruser,pid,args > procmon.out
-  140  history > ~/history.out
-  141  cp ~/history.out .
-  142  nano README.md
-  143  git add .
-  144  git commit -m "Add MEPHI homework 2026 files"
-  145  git branch -M main
-  146  git remote add origin https://github.com/DmitriyBah/mephi-linux-security-2026.git
-  147  git push -u origin main
-  148  git config --global user.name "DmitriyBah"
-  149  git config --global user.email "bahmatovdima@mail.ru"
-  150  git commit -m "Add MEPHI homework 2026 files"
-  151  git log --oneline
-  152  git push -u origin main
-  153  git pull original main --allow-unrelated-histories
-  154  git push -u origin main --force
-  155  cd ~/mephi-repo
-  156  git push -u origin main --force
-  157  git pull original main --allow-unrelated-histories
-  158  git pull origin main --allow-unrelated-histories
-  159  history > ~/history.out
+    1  sudo grub-mkconfig -o /boot/grub/grub.cfg
+    2  rpm -qa | grep grub
+    3  sudo mount | grep efi
+    4  bootmgfw.efi
+    5  sudo mount | grep efi
+    6  exit
+    7  sudo find /boot/efi -type f -iname bootmgfw.efi
+    8  sudo grubby --add-kernel=/boot/efi/EFI/Microsoft/Boot/bootmgfw.efi --title="Windows Boot Manager"
+    9  ls /boot/efi/EFI/
+   10  ls -
+   11  ls -i
+   12  ls /boot/efi/EFI/
+   13  sudo ls /boot/efi/EFI/
+   14  sudo ls -la /boot/efi/EFI/
+   15  sudo efibootmgr
+   16  lsblk -f
+   17  sudo efibootmgr -v
+   18  grep -rn "password_pbkdf2\|set superusers" /etc/grub.d/ /etc/default/grub /etc/grub.d/40_custom 2>/dev/null
+   19  sudo grep -rn "password_pbkdf2\|superusers\|^password " /boot/grub2/grub.cfg
+   20  sudo grep -rn "password_pbkdf2\|superusers\|^password " /boot/efi/EFI/*/grub.cfg
+   21  ls -l /boot/grub2/grub.cfg /boot/efi/EFI/*/grub.cfg 2>/dev/null
+   22  ls -l /boot/grub2/user.cfg /etc/grub.d/*user* 2>/dev/null
+   23  sudo grep -l "GRUB2_PASSWORD" /boot/grub2/user.cfg /etc/default/grub 2>/dev/null
+   24  sudo sed -i '110,112s/^/#/' /boot/grub2/grub.cfg
+   25  sudo sed -i 's/^GRUB2_PASSWORD/#GRUB2_PASSWORD/' /boot/grub2/user.cfg
+   26  sudo grep -n "password_pbkdf2\|superusers" /boot/grub2/grub.cfg
+   27  sudo reboot
+   28  whoami
+   29  sudo whoami
+   30  sudo dnf install -y git
+   31  git --version
+   32  sudo -i
+   33  git clone https://github.com/DmitriyBah/mephi-linux-security-2026.git ~/mephi-repo
+   34  ls ~/mephi-repo
+   35  sudo find / -type f -perm -4000 -ls 2>/dev/null > ~/mephi-repo/setuid-files.out
+   36  wc -l ~/mephi-repo/setuid-files.out
+   37  su - user1
+   38  {   echo "=== Процессы: эффективный UID = root, реальный UID — обычный пользователь ===";   ps -eo euser,ruser,pid,args | head -1;   ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root"';   echo "=== passwd во время работы: euser=root, ruser=user1 ===";   ps -eo euser,ruser,pid,args | grep [p]asswd; } > ~/mephi-repo/procmon.out
+   39  echo "=== Процессы: эффективный UID = root, реальный UID — обычный пользователь ==="
+   40  ps -eo euser,ruser,pid,args | head -1
+   41  ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root"'
+   42  echo "=== passwd во время работы: euser=root, ruser=user1 ==="
+   43  ps -eo euser,ruser,pid,args | grep [p]asswd
+   44  > ~/mephi-repo/procmon.out
+   45  { echo "=== Процессы: эффективный UID = root, реальный UID — обычный пользователь ==="; ps -eo euser,ruser,pid,args | head -1; ps -eo euser,ruser,pid,args | awk '$1=="root" && $2!="root"'; echo "=== passwd во время работы: euser=root, ruser=user1 ==="; ps -eo euser,ruser,pid,args | grep [p]asswd; } > ~/mephi-repo/procmon.out
+   46  cat ~/mephi-repo/procmon.out
+   47  su - user1
+   48  echo "demo" | sudo tee /tmp/rootfile > /dev/null
+   49  sudo chown root:root /tmp/rootfile
+   50  sudo rm -f /home/user1/bin/chown
+   51  sudo cp /usr/bin/chown /home/user1/bin/chown
+   52  sudo chown root:root /home/user1/bin/chown
+   53  sudo setcap cap_chown+ep /home/user1/bin/chown
+   54  sudo getcap /home/user1/bin/chown
+   55  {   echo "=== до: владелец root ===";   ls -l /tmp/rootfile;   echo "=== getcap ===";   sudo getcap /home/user1/bin/chown;   echo "=== смена владельца от user1 ===";   sudo -u user1 /home/user1/bin/chown user1 /tmp/rootfile;   echo "exit=$?";   echo "=== после: владелец user1 ===";   ls -l /tmp/rootfile; } > ~/mephi-repo/cap-demo.out
+   56  cat ~/mephi-repo/cap-demo.out
+   57  sudo tee /etc/sudoers.d/user1-time > /dev/null <<'EOF'
+user1 ALL=(root) NOPASSWD: /usr/bin/date, /usr/bin/timedatectl
+EOF
+
+   58  sudo visudo -c
+   59  sudo chmod 0440 /etc/sudoers.d/user1-time
+   60  sudo visudo -c
+   61  [200~{
+   62    echo "=== sudo -l от user1 ==="
+   63    sudo -u user1 sudo -n -l
+   64  {   echo "=== sudo -l от user1 ===";   sudo -u user1 sudo -n -l;   echo "=== смена времени от user1 ===";   sudo -n timedatectl set-ntp false;   sudo -u user1 sudo -n timedatectl set-time '20:15:00';   echo "=== время после смены ===";   date; } > ~/mephi-repo/sudo-demo.out
+   65  cat ~/mephi-repo/sudo-demo.out
+   66  sudo timedatectl set-ntp true
+   67  getent passwd > ~/mephi-repo/passwd.out
+   68  getent group > ~/mephi-repo/group.out
+   69  sudo cat /etc/sudoers /etc/sudoers.d/user1-time > ~/mephi-repo/sudoers.out
+   70  sudo getcap /home/user1/bin/cat /home/user1/bin/chown >> ~/mephi-repo/getcap.out
+   71  sudo stat /home/user1 > ~/mephi-repo/stat.out
+   72  sudo stat /home/user1/bin/cat >> ~/mephi-repo/stat.out
+   73  sudo stat /home/user1/bin/chown >> ~/mephi-repo/stat.out
+   74  history > ~/mephi-repo/history.out

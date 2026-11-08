@@ -1,30 +1,42 @@
 root:x:0:0:root:/root:/bin/bash
-daemon:x:1:1:daemon:/usr/sbin:/usr/sbin/nologin
-bin:x:2:2:bin:/bin:/usr/sbin/nologin
-sys:x:3:3:sys:/dev:/usr/sbin/nologin
-sync:x:4:65534:sync:/bin:/bin/sync
-games:x:5:60:games:/usr/games:/usr/sbin/nologin
-man:x:6:12:man:/var/cache/man:/usr/sbin/nologin
-lp:x:7:7:lp:/var/spool/lpd:/usr/sbin/nologin
-mail:x:8:8:mail:/var/mail:/usr/sbin/nologin
-news:x:9:9:news:/var/spool/news:/usr/sbin/nologin
-uucp:x:10:10:uucp:/var/spool/uucp:/usr/sbin/nologin
-proxy:x:13:13:proxy:/bin:/usr/sbin/nologin
-www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
-backup:x:34:34:backup:/var/backups:/usr/sbin/nologin
-list:x:38:38:Mailing List Manager:/var/list:/usr/sbin/nologin
-irc:x:39:39:ircd:/run/ircd:/usr/sbin/nologin
-_apt:x:42:65534::/nonexistent:/usr/sbin/nologin
-nobody:x:65534:65534:nobody:/nonexistent:/usr/sbin/nologin
-dhcpcd:x:100:65534:DHCP Client Daemon:/usr/lib/dhcpcd:/bin/false
-messagebus:x:101:101::/nonexistent:/usr/sbin/nologin
-tss:x:102:106:TPM software stack:/var/lib/tpm:/bin/false
-fetchmail:x:103:65534::/var/lib/fetchmail:/bin/false
-sshd:x:998:65534:sshd user:/run/sshd:/usr/sbin/nologin
-ntpsec:x:104:109::/nonexistent:/usr/sbin/nologin
-polkitd:x:997:997:User for polkitd:/:/usr/sbin/nologin
-essora:x:1000:1000::/home/essora:/bin/bash
-usbmux:x:105:46:usbmux daemon:/var/lib/usbmux:/usr/sbin/nologin
-_flatpak:x:106:114:Flatpak system-wide installation helper:/nonexistent:/usr/sbin/nologin
-rtkit:x:107:115:RealtimeKit:/proc:/usr/sbin/nologin
-user1:x:1234:1234::/home/user1:/bin/bash
+bin:x:1:1:bin:/bin:/sbin/nologin
+daemon:x:2:2:daemon:/sbin:/sbin/nologin
+adm:x:3:4:adm:/var/adm:/sbin/nologin
+lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
+sync:x:5:0:sync:/sbin:/bin/sync
+shutdown:x:6:0:shutdown:/sbin:/sbin/shutdown
+halt:x:7:0:halt:/sbin:/sbin/halt
+mail:x:8:12:mail:/var/spool/mail:/sbin/nologin
+operator:x:11:0:operator:/root:/sbin/nologin
+games:x:12:100:games:/usr/games:/sbin/nologin
+ftp:x:14:50:FTP User:/var/ftp:/sbin/nologin
+nobody:x:65534:65534:Kernel Overflow User:/:/sbin/nologin
+dbus:x:81:81:System Message Bus:/:/usr/sbin/nologin
+rtkit:x:172:172:RealtimeKit:/proc:/sbin/nologin
+geoclue:x:999:999:User for geoclue:/var/lib/geoclue:/sbin/nologin
+pipewire:x:998:998:PipeWire System Daemon:/run/pipewire:/usr/sbin/nologin
+tss:x:59:59:Account used for TPM access:/:/usr/sbin/nologin
+systemd-oom:x:997:997:systemd Userspace OOM Killer:/:/usr/sbin/nologin
+systemd-resolve:x:193:193:systemd Resolver:/:/usr/sbin/nologin
+polkitd:x:114:114:User for polkitd:/:/sbin/nologin
+avahi:x:70:70:Avahi mDNS/DNS-SD Stack:/var/run/avahi-daemon:/sbin/nologin
+sshd:x:74:74:Privilege-separated SSH:/usr/share/empty.sshd:/usr/sbin/nologin
+gluster:x:996:995:GlusterFS daemons:/run/gluster:/sbin/nologin
+dnsmasq:x:995:994:Dnsmasq DHCP and DNS server:/var/lib/dnsmasq:/usr/sbin/nologin
+rpc:x:32:32:Rpcbind Daemon:/var/lib/rpcbind:/sbin/nologin
+unbound:x:994:993:Unbound DNS resolver:/etc/unbound:/sbin/nologin
+openvpn:x:993:990:OpenVPN:/etc/openvpn:/sbin/nologin
+nm-openvpn:x:992:989:Default user for running openvpn spawned by NetworkManager:/:/sbin/nologin
+colord:x:991:988:User for colord:/var/lib/colord:/sbin/nologin
+sddm:x:990:987:SDDM Greeter Account:/var/lib/sddm:/usr/sbin/nologin
+postfix:x:89:89::/var/spool/postfix:/sbin/nologin
+chrony:x:989:985:chrony system user:/var/lib/chrony:/sbin/nologin
+nslcd:x:65:55:LDAP Client User:/:/sbin/nologin
+tcpdump:x:72:72:tcpdump:/:/usr/sbin/nologin
+nm-openconnect:x:981:981:NetworkManager user for OpenConnect:/:/usr/sbin/nologin
+systemd-coredump:x:980:980:systemd Core Dumper:/:/usr/sbin/nologin
+systemd-timesync:x:979:979:systemd Time Synchronization:/:/usr/sbin/nologin
+vboxadd:x:978:1::/var/run/vboxadd:/usr/sbin/nologin
+Dima:x:1000:1000:Dima:/home/Dima:/bin/bash
+qemu:x:107:107:qemu user:/:/sbin/nologin
+user1:x:1234:1001::/home/user1:/bin/bash

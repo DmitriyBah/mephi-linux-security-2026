@@ -1,0 +1,10 @@
+=== обычный cat от user1 (ожидаем отказ) ===
+exit=1
+=== SUID-копия от user1 (ожидаем успех) ===
+exit=0
+=== первые строки /etc/shadow через SUID-копию ===
+root:$y$j9T$rufSd7rtQDEo995dgbb0.2Lu$T9e.Eb0/HVVi.AXgoLxooHU.lEXU4K2mbCxpuzvZ25B::0:99999:7:::
+bin:*:20047:0:99999:7:::
+daemon:*:20047:0:99999:7:::
+adm:*:20047:0:99999:7:::
+lp:*:20047:0:99999:7:::

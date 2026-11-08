@@ -1,0 +1,8 @@
+=== до: владелец root ===
+-rw-r--r--. 1 root root 5 ноя  8 21:16 /tmp/rootfile
+=== getcap ===
+/home/user1/bin/chown cap_chown=ep
+=== смена владельца от user1 ===
+exit=0
+=== после: владелец user1 ===
+-rw-r--r--. 1 user1 root 5 ноя  8 21:16 /tmp/rootfile
