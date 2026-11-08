@@ -1,10 +1,48 @@
-=== обычный cat от user1 (ожидаем отказ) ===
+=== владелец и права SUID-копии ===
+root:root 4755 /home/user1/bin/cat
+=== обычный cat от user1: ожидаем отказ ===
 exit=1
-=== SUID-копия от user1 (ожидаем успех) ===
-exit=0
-=== первые строки /etc/shadow через SUID-копию ===
+=== SUID-копия от user1: ожидаем успех ===
 root:$y$j9T$rufSd7rtQDEo995dgbb0.2Lu$T9e.Eb0/HVVi.AXgoLxooHU.lEXU4K2mbCxpuzvZ25B::0:99999:7:::
 bin:*:20047:0:99999:7:::
 daemon:*:20047:0:99999:7:::
 adm:*:20047:0:99999:7:::
 lp:*:20047:0:99999:7:::
+sync:*:20047:0:99999:7:::
+shutdown:*:20047:0:99999:7:::
+halt:*:20047:0:99999:7:::
+mail:*:20047:0:99999:7:::
+operator:*:20047:0:99999:7:::
+games:*:20047:0:99999:7:::
+ftp:*:20047:0:99999:7:::
+nobody:*:20047:0:99999:7:::
+dbus:!!:20765::::::
+rtkit:!!:20765::::::
+geoclue:!!:20765::::::
+pipewire:!!:20765::::::
+tss:!!:20765::::::
+systemd-oom:!*:20765::::::
+systemd-resolve:!*:20765::::::
+polkitd:!!:20765::::::
+avahi:!!:20765::::::
+sshd:!!:20765::::::
+gluster:!!:20765::::::
+dnsmasq:!!:20765::::::
+rpc:!!:20765:0:99999:7:::
+unbound:!!:20765::::::
+openvpn:!!:20765::::::
+nm-openvpn:!!:20765::::::
+colord:!!:20765::::::
+sddm:!!:20765::::::
+postfix:!!:20765::::::
+chrony:!!:20765::::::
+nslcd:!!:20765::::::
+tcpdump:!!:20765::::::
+nm-openconnect:!*:20765::::::
+systemd-coredump:!*:20765::::::
+systemd-timesync:!*:20765::::::
+vboxadd:!*:20765::::::
+Dima:$y$j9T$XAEJbHkts2bMTg/NmP7DSRIi$MHdwh6OvXdKsI.jX6wn1C7evoPSrdZqjr4fkR97tUnD::0:99999:7:::
+qemu:!!:20765::::::
+user1:$y$j9T$AC7qkR2EQkWfYNzjFi5W81$DGVjC/vwQ/oI8FBbf7zG45fqN4zPWn8qn5WvVHN9S0A:20765:0:90:7:::
+exit=0

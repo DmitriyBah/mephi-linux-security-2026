@@ -1,7 +1,10 @@
-=== Процессы: эффективный UID = root, реальный UID — обычный пользователь ===
+=== процессы: euid=root, ruid != root ===
 EUSER    RUSER        PID COMMAND
 root     Dima        1577 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
-root     Dima       54123 su - user1
-root     user1      54223 passwd
+root     Dima       56111 sudo -u user1 passwd
+root     Dima       56121 sudo -u user1 passwd
+root     user1      56122 passwd
 === passwd во время работы: euser=root, ruser=user1 ===
-root     user1      54223 passwd
+root     Dima       56111 sudo -u user1 passwd
+root     Dima       56121 sudo -u user1 passwd
+root     user1      56122 passwd
